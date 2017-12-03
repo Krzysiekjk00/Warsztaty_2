@@ -58,11 +58,11 @@ class Message():
         result = cursor.fetchall()
         for row in result:
             loaded_message = Message()
-            loaded_message.__id = result[0]
-            loaded_message.sender = result[1]
-            loaded_message.recipient = result[2]
-            loaded_message.content = result[3] #index error!
-            loaded_message.creation_date = result[4]
+            loaded_message.__id = row[0]
+            loaded_message.sender = row[1]
+            loaded_message.recipient = row[2]
+            loaded_message.content = row[3] #index error!
+            loaded_message.creation_date = row[4]
             ret.append(loaded_message)
         return ret
 
@@ -74,11 +74,11 @@ class Message():
         result = cursor.fetchall()
         for row in result:
             loaded_message = Message()
-            loaded_message.__id = result[0]
-            loaded_message.sender = result[1]
-            loaded_message.recipient = result[2]
-            loaded_message.content = result[3]
-            loaded_message.creation_date = result[4]
+            loaded_message.__id = row[0]
+            loaded_message.sender = row[1]
+            loaded_message.recipient = row[2]
+            loaded_message.content = row[3]
+            loaded_message.creation_date = row[4]
             ret.append(loaded_message)
         return ret
 
